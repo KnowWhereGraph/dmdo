@@ -1,1 +1,1 @@
-# Disaster-Management-Domain-Ontology
+# Disaster Management Domain Ontology
