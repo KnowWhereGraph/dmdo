@@ -14,17 +14,15 @@ DMDO consists of two modules: the [Hazard Module](#hazard-module), which concept
 **NEEDS CONTENT**
 
 ## Operational Module
-The disaster operational module focuses on the _functional_ and _processual_ aspects of disaster management. 
+The Operational Module focuses on the **functional** and **processual** aspects of disaster management. 
 
-[High-level overview: Functional aspects](images/operational2.PNG)
-*High-level overview of the functional aspects of the Operational module*
+**Functional aspects** may include the design, operation or improvement of systems and processes, for example, strengthening levee systems to prevent or reduce the severity of disasters. Functional aspects may also include the coordination, regulation and monitoring of relief and recovery assistance.
 
-Functional aspects may include the design, operation or improvement of systems and processes, for example, strengthening levee systems to prevent or reduce the severity of disasters. Functional aspects may also include the coordination, regulation and monitoring of relief and recovery assistance.
+<img src="images/operational2.PNG" width=400 alt="High-level overview: Functional aspects">
 
-[High-level overview: Processual aspects](images/operational.PNG)
-*High-level overview of the processual aspects of the Operational module*
+**Processual aspects** are more activity oriented, taking one or more kinds of inputs (people or resources) to create outputs (or outcomes) that are of value in a given situation. Examples include mobilizing relief supplies, evacuating people, helping humanitarian responders to rapidly access to disaster victims for humanitarian responders, facilitate the timely flow of relief goods.
 
-Processual aspects are more activity-oriented, taking one or more kinds of inputs (people or resources) to create outputs (or outcomes) that are of value in a given situation. Examples include mobilizing relief supplies, evacuating people, helping humanitarian responders to rapidly access to disaster victims for humanitarian responders, facilitate the timely flow of relief goods.
+<img src="images/operational.PNG" width=550 alt="High-level overview: Processual aspects">
 
 
 ## Contributors
