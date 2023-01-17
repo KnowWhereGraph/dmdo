@@ -1,4 +1,4 @@
-@prefix : <https://undrr.org/hazard/hip/> .
+@prefix undrr-hip: <https://knowwheregraph.org/undrr/hip/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -6,9 +6,9 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
-@base <https://knowwheregraph.org/undrr/hip> .
 
-<https://knowwheregraph.org/undrr/hip> rdf:type owl:Ontology ;
+
+<https://knowwheregraph.org/undrr/hip/> rdf:type owl:Ontology ;
                                         terms:created "06-10-2022" ;
                                         terms:description """Source documentation:
 1. https://www.undrr.org/publication/hazard-information-profiles-supplement-undrr-isc-hazard-definition-classification
@@ -55,26 +55,28 @@ terms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://knowwheregraph/ontology/dmdo/broader
-<http://knowwheregraph/ontology/dmdo/broader> rdf:type owl:ObjectProperty ;
-                                              owl:inverseOf <http://knowwheregraph/ontology/dmdo/narrower> ;
+###  broader
+undrr-hip:broader rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf undrr-hip:narrower ;
                                               rdfs:label "broader" .
 
 
-###  http://knowwheregraph/ontology/dmdo/hasMember
-<http://knowwheregraph/ontology/dmdo/hasMember> rdf:type owl:ObjectProperty ;
-                                                owl:inverseOf <http://knowwheregraph/ontology/dmdo/isMemberOf> ;
+### hasMember
+undrr-hip:hasMember rdf:type owl:ObjectProperty ;
+                                                owl:inverseOf undrr-hip:isMemberOf ;
                                                 rdfs:label "has member" .
 
 
-###  http://knowwheregraph/ontology/dmdo/isMemberOf
-<http://knowwheregraph/ontology/dmdo/isMemberOf> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "is member of" .
+### isMemberOf
+undrr-hip:isMemberOf rdf:type owl:ObjectProperty ;
+						owl:inverseOf undrr-hip:hasMember ;
+                        rdfs:label "is member of" .
 
 
-###  http://knowwheregraph/ontology/dmdo/narrower
-<http://knowwheregraph/ontology/dmdo/narrower> rdf:type owl:ObjectProperty ;
-                                               rdfs:label "narrower" .
+### narrower
+undrr-hip:narrower rdf:type owl:ObjectProperty ;
+					owl:inverseOf undrr-hip:broader ;
+                    rdfs:label "narrower" .
 
 
 #################################################################
