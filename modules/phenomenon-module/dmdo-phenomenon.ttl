@@ -1,0 +1,129 @@
+@prefix dmdo: <http://knowwheregraph/ontology/dmdo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix schema: <http://schema.org/>.
+
+
+<http://knowwheregraph/ontology/dmdo> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://knowwheregraph/ontology/dmdo/affectedBy
+<http://knowwheregraph/ontology/dmdo/affectedBy> rdf:type owl:ObjectProperty ;
+                                                 <http://schema.org/domainIncludes> "Element-At-Risk" ;
+                                                 <http://schema.org/rangeIncludes> "Disaster" ,
+                                                                                   "Hazard" ;
+                                                 rdfs:label "affected by" .
+
+
+###  http://knowwheregraph/ontology/dmdo/associatedWith
+<http://knowwheregraph/ontology/dmdo/associatedWith> rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "associated with" .
+
+
+###  http://knowwheregraph/ontology/dmdo/causes
+<http://knowwheregraph/ontology/dmdo/causes> rdf:type owl:ObjectProperty ;
+                                             rdfs:label "causes" .
+
+
+###  http://knowwheregraph/ontology/dmdo/hazardType
+<http://knowwheregraph/ontology/dmdo/hazardType> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "hazard type" .
+
+
+###  http://knowwheregraph/ontology/dmdo/involvedIn
+<http://knowwheregraph/ontology/dmdo/involvedIn> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "involved in" .
+
+
+###  http://knowwheregraph/ontology/dmdo/propertyOf
+<http://knowwheregraph/ontology/dmdo/propertyOf> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "property of" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://knowwheregraph/ontology/dmdo/Disaster
+<http://knowwheregraph/ontology/dmdo/Disaster> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://knowwheregraph/ontology/dmdo/Hazard> ;
+                                               rdfs:label "Disaster" .
+
+
+###  http://knowwheregraph/ontology/dmdo/ElementAtRisk
+<http://knowwheregraph/ontology/dmdo/ElementAtRisk> rdf:type owl:Class ;
+                                                    rdfs:label "Element-At-Risk" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Hazard
+<http://knowwheregraph/ontology/dmdo/Hazard> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://knowwheregraph/ontology/dmdo/Phenomenon> ;
+                                             rdfs:label "Hazard" .
+
+
+###  http://knowwheregraph/ontology/dmdo/HazardType
+<http://knowwheregraph/ontology/dmdo/HazardType> rdf:type owl:Class ;
+                                                 rdfs:label "Hazard Type" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Impact
+<http://knowwheregraph/ontology/dmdo/Impact> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://knowwheregraph/ontology/dmdo/Phenomenon> ;
+                                             rdfs:label "Impact" .
+
+
+###  http://knowwheregraph/ontology/dmdo/LevelOfExposure
+<http://knowwheregraph/ontology/dmdo/LevelOfExposure> rdf:type owl:Class ;
+                                                      rdfs:label "Level Of Exposure" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Magnitude
+<http://knowwheregraph/ontology/dmdo/Magnitude> rdf:type owl:Class ;
+                                                rdfs:label "Magnitude" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Phenomenon
+<http://knowwheregraph/ontology/dmdo/Phenomenon> rdf:type owl:Class ;
+                                                 rdfs:label "Phenomenon" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Resilience
+<http://knowwheregraph/ontology/dmdo/Resilience> rdf:type owl:Class ;
+                                                 rdfs:label "Resilience" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Risk
+<http://knowwheregraph/ontology/dmdo/Risk> rdf:type owl:Class ;
+                                           rdfs:label "Risk" .
+
+
+###  http://knowwheregraph/ontology/dmdo/Vulnerability
+<http://knowwheregraph/ontology/dmdo/Vulnerability> rdf:type owl:Class ;
+                                                    rdfs:label "Vulnerability" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
