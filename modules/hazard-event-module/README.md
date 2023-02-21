@@ -1,1 +1,3 @@
-# Disaster Management Domain Ontology
+# Hazard Event Module
+
+## Generalized Schema Diagram
