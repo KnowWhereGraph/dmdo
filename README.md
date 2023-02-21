@@ -7,11 +7,11 @@ DMDO offers:
 - methods to use or integrate data with authoritative classification schemas and vocabularies; and
 - representation of causal relations between events and/or impacts and effects on people, places and public health.
 
-DMDO consists of two modules: the [Phenomenon Module](#phenomenon-module), which conceptualizes and organizes observational data pertaining to different types of hazards, largely by  re-using the [SOSA Ontology](https://www.w3.org/2015/spatial/wiki/SOSA_Ontology); and the [Operational Module](#operational-module), which provides a pattern for operational effectiveness before, during and after an emergency.  
+DMDO consists of two modules: the [Hazard Event Module](./hazard-event-module/), which conceptualizes and organizes observational data pertaining to different types of hazards, largely by  re-using the [SOSA Ontology](https://www.w3.org/2015/spatial/wiki/SOSA_Ontology); and the [Hazard Operational Module](./hazard-operational-module/), which provides a pattern for operational effectiveness before, during and after an emergency.  
 
-## Phenomenon Module
+## Hazard Event Module
 
-<img src="modules/phenomenon-module/phenomenon-module-overview.PNG" width=800 alt="Key concepts and properties in the phenomenon module. Orange boxes indicate concepts introduced in DMDO. Bright blue boxes indicate concepts from external ontologies (SOSA and GeoSPARQL here).">
+<img src="modules/hazard-event-module/hazard-event-module-overview.PNG" width=800 alt="Key concepts and properties in the phenomenon module. Orange boxes indicate concepts introduced in DMDO. Bright blue boxes indicate concepts from external ontologies (SOSA and GeoSPARQL here).">
 
 [Click here for description of key concepts](#phenomenon-module)
 
