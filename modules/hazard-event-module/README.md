@@ -1,4 +1,4 @@
 # Hazard Event Module
 
 ## Generalized Schema Diagram
-* [schema-diagram](hazard-event-module-overview.PNG)
+ <img src="./hazard-event-module-overview.PNG" width=60%>
