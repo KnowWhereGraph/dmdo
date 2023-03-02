@@ -1,0 +1,3 @@
+1. update annotation in ontology ttls (get description from the paper)
+	rdf:label, rdf:comment,
+2. update schema diagrams and description in the github readme (follow paper)
