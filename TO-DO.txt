@@ -1,6 +1,6 @@
-Paper link - 
-Github link -
-OWL axioms document - 
+Paper link - https://www.overleaf.com/1553392387kkyzcnrsqdgt
+Github link - https://github.com/KnowWhereGraph/dmdo
+OWL axioms document - https://www.overleaf.com/2193588835djcqwkvhbndc
 
 Note: Please feel free to provide suggestions on how we can document this entire work and the paper better!
 
