@@ -1,4 +1,6 @@
-# Hazard Event Module
+# The Disaster Risk Properties Ontology (modeling risk properties)
 
 ## Generalized Schema Diagram
- <img src="./hazard-event-module-overview.PNG" width=60%>
+
+
+ <img src="./schema-diagrams/hazard-disaster.png" width=50%>
