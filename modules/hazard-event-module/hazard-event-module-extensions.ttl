@@ -1,4 +1,3 @@
-@prefix : <http://knowwheregraph/ontology/dmdo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
@@ -14,7 +13,6 @@
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix undrr-hip: <https://knowwheregraph.org/undrr-hip/> .
-@base <http://knowwheregraph/ontology/dmdo> .
 
 <http://knowwheregraph/ontology/dmdo> rdf:type owl:Ontology ;
                                        terms:contributor "Shirly Stephen, Mark Schildhauer, Krysztof Janowicz, Pascal Hitzler"@en ;
