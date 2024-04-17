@@ -14,7 +14,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix undrr-hip: <https://knowwheregraph.org/undrr-hip/> .
 
-<http://knowwheregraph/ontology/dmdo> rdf:type owl:Ontology ;
+<http://knowwheregraph/ontology/dmdo#> rdf:type owl:Ontology ;
                                        terms:contributor "Shirly Stephen, Mark Schildhauer, Krysztof Janowicz, Pascal Hitzler"@en ;
                                        terms:created "2023-10-18"^^xsd:date ;
                                        terms:creator "The KnowWhereGraph Project"@en ;
