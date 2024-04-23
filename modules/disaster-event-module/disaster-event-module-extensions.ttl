@@ -1,34 +1,66 @@
 @prefix deo: <http://knowwheregraph/ontology/deo#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-foaf:Agent a owl:Class .
-
 
 <http://knowwheregraph/ontology/deo> rdf:type owl:Ontology ;
-dcterms:created "2024-04-23"^^xsd:date ;
-dcterms:creator [ rdf:type foaf:Agent ;
-         foaf:name "The KnowWhereGraph Project"@en ] ;
-dcterms:description "The Disaster Event Ontology (DEO) conceptualizes disaster-related events, related observations, spatiotemporal aspects, and causal relations. This ontology is meant to link the HIP Ontology to other disaster-themed data."@en ;
-dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-dcterms:title "Disaster Properties Ontology (DPO)"@en ;
-vann:preferredNamespaceUri "http://knowwheregraph/ontology/deo/" ;
-owl:versionInfo "v 1.0" .
+                                      dcterms:created "2024-04-23"^^xsd:date ;
+                                      dcterms:creator [ rdf:type foaf:Agent ;
+                                                        foaf:name "The KnowWhereGraph Project"@en
+                                                      ] ;
+                                      dcterms:description "The Disaster Event Ontology (DEO) conceptualizes disaster-related events, related observations, spatiotemporal aspects, and causal relations. This ontology is meant to link the HIP Ontology to other disaster-themed data."@en ;
+                                      dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                      dcterms:title "Disaster Event Ontology (DEO)"@en ;
+                                      vann:preferredNamespaceUri "http://knowwheregraph/ontology/deo/" ;
+                                      owl:versionInfo "v 1.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dcterms:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
 
 ###  http://schema.org/domainIncludes
 schema:domainIncludes rdf:type owl:AnnotationProperty .
@@ -38,23 +70,24 @@ schema:domainIncludes rdf:type owl:AnnotationProperty .
 schema:rangeIncludes rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#description
 skos:description rdf:type owl:AnnotationProperty .
 
 
-foaf:name a owl:AnnotationProperty .
-dcterms:title a owl:AnnotationProperty .
-dcterms:description a owl:AnnotationProperty .
-dcterms:rights a owl:AnnotationProperty .
-dcterms:license a owl:AnnotationProperty .
-dcterms:created a owl:AnnotationProperty .
-dcterms:creator a owl:AnnotationProperty .
-skos:definition a owl:AnnotationProperty .
-skos:example a owl:AnnotationProperty .
-skos:note a owl:AnnotationProperty .
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
-vann:preferredNamespaceUri a owl:AnnotationProperty .
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
 
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -63,6 +96,7 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 
 ###  http://knowwheregraph/ontology/deo#hasDisasterOfInterest
 deo:hasDisasterOfInterest rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf sosa:hasFeatureOfInterest ;
                           schema:domainIncludes "'Disaster Observation'" ;
                           schema:rangeIncludes "Disaster" ;
                           rdfs:label "has disaster of Interest" .
@@ -70,6 +104,7 @@ deo:hasDisasterOfInterest rdf:type owl:ObjectProperty ;
 
 ###  http://knowwheregraph/ontology/deo#hasHazardOfInterest
 deo:hasHazardOfInterest rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf sosa:hasFeatureOfInterest ;
                         schema:domainIncludes "'Hazard Observation'" ;
                         schema:rangeIncludes "Hazard" ;
                         rdfs:label "has hazard of interest" .
@@ -80,6 +115,14 @@ deo:hasHazardProperty rdf:type owl:ObjectProperty ;
                       schema:domainIncludes "'Hazard Type'" ;
                       schema:rangeIncludes "'Hazard Property'" ;
                       rdfs:label "has hazard property" .
+
+
+###  http://knowwheregraph/ontology/deo#hasImpactOfInterest
+deo:hasImpactOfInterest rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf sosa:hasFeatureOfInterest ;
+                        schema:domainIncludes "'Impact Observation'" ;
+                        schema:rangeIncludes "'Disaster Impact'" ;
+                        rdfs:label "has impact of Interest" .
 
 
 ###  http://knowwheregraph/ontology/deo#hasPart
@@ -100,11 +143,13 @@ deo:hasPossiblyCausesRelation rdf:type owl:ObjectProperty ;
 ###  http://knowwheregraph/ontology/deo#hasTemporalScope
 deo:hasTemporalScope rdf:type owl:ObjectProperty ;
                      schema:domainIncludes "Event" ;
+                     schema:rangeIncludes "time:TemporalEntity" ;
                      rdfs:label "has temporal scope" .
 
 
 ###  http://knowwheregraph/ontology/deo#hasUltimateFeatureOfInterest
 deo:hasUltimateFeatureOfInterest rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf sosa:hasUltimateFeatureOfInterest ;
                                  schema:domainIncludes "'Disaster Observation'" ,
                                                        "'Hazard Observation'" ;
                                  schema:rangeIncludes "'Hazard Type'" ;
@@ -127,6 +172,7 @@ deo:involvedInImpact rdf:type owl:ObjectProperty ;
 
 ###  http://knowwheregraph/ontology/deo#observedProperty
 deo:observedProperty rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf sosa:observedProperty ;
                      schema:domainIncludes "'Disaster Observation'" ,
                                            "'Hazard Observation'" ,
                                            "'Impact Observation'" ;
@@ -185,36 +231,53 @@ deo:resultsIn rdf:type owl:ObjectProperty ;
                                                 rdfs:label "hazard type" .
 
 
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+sosa:hasFeatureOfInterest rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
+sosa:hasUltimateFeatureOfInterest rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+sosa:observedProperty rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
 
 ###  http://knowwheregraph/ontology/deo#DisasterObservation
 deo:DisasterObservation rdf:type owl:Class ;
+                        rdfs:subClassOf sosa:Observation ;
                         rdfs:label "Disaster Observation" ;
                         skos:description "This class denotes observations corresponding to instances of the Disaster class." .
 
 
 ###  http://knowwheregraph/ontology/deo#HazardObservation
 deo:HazardObservation rdf:type owl:Class ;
+                      rdfs:subClassOf sosa:Observation ;
                       rdfs:label "Hazard Observation" ;
                       skos:description "This class denotes observations corresponding to instances of the Hazard class." .
 
 
 ###  http://knowwheregraph/ontology/deo#HazardProperty
 deo:HazardProperty rdf:type owl:Class ;
+                   rdfs:subClassOf sosa:ObservableProperty ;
                    rdfs:label "Hazard Property" ;
                    skos:description "This class denotes the observable properties for any specific type of hazard. For e.g., the observable properties of a hurricane are sustained wind speed, atmospheric pressure." .
 
 
 ###  http://knowwheregraph/ontology/deo#ImpactObservation
 deo:ImpactObservation rdf:type owl:Class ;
+                      rdfs:subClassOf sosa:Observation ;
                       rdfs:label "Impact Observation" ;
                       skos:description "This class denotes observations corresponding to instances of the DisasterImpact class." .
 
 
 ###  http://knowwheregraph/ontology/deo#ImpactType
 deo:ImpactType rdf:type owl:Class ;
+               rdfs:subClassOf sosa:ObservableProperty ;
                rdfs:label "Impact Type" ;
                skos:description "This concept refers to the impact theme or the ultimate feature of interest in SOSA terminology. This class denotes the impact types denotes in standard classification schemes, e.g., impact types from Desinventar." .
 
@@ -241,12 +304,14 @@ deo:PossiblyCausesRelation rdf:type owl:Class ;
 
 ###  http://knowwheregraph/ontology/deo/ElementAtRisk
 <http://knowwheregraph/ontology/deo/ElementAtRisk> rdf:type owl:Class ;
+                                                   rdfs:subClassOf sosa:FeatureOfInterest ;
                                                    rdfs:label "Element-At-Risk" ;
                                                    skos:description "Element-at risk is a generic term that signifies all objects, persons, animals, activities and processes that may be adversely affected by hazardous phenomena, in a particular area, either directly or indirectly. This includes: buildings, facilities, population, livestock, economic activities, public services, environment. (Source: The Carribean Handbook of Risk Information Management http://www.charim.net/methodology/52)" .
 
 
 ###  http://knowwheregraph/ontology/deo/Event
 <http://knowwheregraph/ontology/deo/Event> rdf:type owl:Class ;
+                                           rdfs:subClassOf sosa:FeatureOfInterest ;
                                            rdfs:label "Event" ;
                                            skos:description "This generic concept denotes any disaster-related occurrences (hazard, disaster, impact) with observable properties (e.g., intensity, magnitude, extent) that can be measured. In that sense this concept can also be mentioned as a subclass of sosa:FeatureOfInterest from the SOSA ontology, which denotes any feature that can be observed based on a set of its attributes." .
 
@@ -263,5 +328,45 @@ deo:PossiblyCausesRelation rdf:type owl:Class ;
                                                 rdfs:label "Hazard Type" ;
                                                 skos:description "This concept refers to the hazard theme or the ultimate feature of interest in SOSA terminology. This class denotes the hazard types denotes in standard classification schemes, e.g., the HIP Ontology." .
 
+
+###  http://www.opengis.net/ont/geosparql#Feature
+geo:Feature rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+geo:Geometry rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+time:TemporalEntity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+sosa:FeatureOfInterest rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+sosa:ObservableProperty rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+sosa:Observation rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class .
+
+
+[ rdf:type foaf:Agent ;
+  foaf:name "The KnowWhereGraph Project"@en
+] .
+
+[ rdf:type foaf:Agent ;
+   foaf:name "The KnowWhereGraph Project"@en
+ ] .
+
+[ rdf:type foaf:Agent ;
+   foaf:name "The KnowWhereGraph Project"@en
+ ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
