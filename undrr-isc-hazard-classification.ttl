@@ -1428,6 +1428,11 @@ hip:CH0007 rdf:type owl:Class ;
                            ] .
 
 
+###  https://undrr-hip.org/CH0009
+hip:CH0009 rdf:type owl:Class ;
+           rdfs:subClassOf hip:SpecificHazard .
+
+
 ###  https://undrr-hip.org/CH0010
 hip:CH0010 rdf:type owl:Class ;
            rdfs:subClassOf hip:SpecificHazard ,
@@ -1439,6 +1444,11 @@ hip:CH0010 rdf:type owl:Class ;
                              owl:onProperty hip:isMemberOf ;
                              owl:someValuesFrom hip:HC15
                            ] .
+
+
+###  https://undrr-hip.org/CH0011
+hip:CH0011 rdf:type owl:Class ;
+           rdfs:subClassOf hip:SpecificHazard .
 
 
 ###  https://undrr-hip.org/CH0013
@@ -1621,6 +1631,11 @@ hip:CH8 rdf:type owl:Class ;
         rdfs:label "Temperature Related" .
 
 
+###  https://undrr-hip.org/CHO012
+hip:CHO012 rdf:type owl:Class ;
+           rdfs:subClassOf hip:SpecificHazard .
+
+
 ###  https://undrr-hip.org/Definition
 hip:Definition rdf:type owl:Class ;
                rdfs:subClassOf hip:MetadataElement ;
@@ -1710,6 +1725,11 @@ hip:EN0006 rdf:type owl:Class ;
                              owl:onProperty hip:isMemberOf ;
                              owl:someValuesFrom hip:HC18
                            ] .
+
+
+###  https://undrr-hip.org/EN0007
+hip:EN0007 rdf:type owl:Class ;
+           rdfs:subClassOf hip:SpecificHazard .
 
 
 ###  https://undrr-hip.org/EN0008
@@ -3022,7 +3042,6 @@ hip:HazardCluster rdf:type owl:Class ;
 
 ###  https://undrr-hip.org/HazardType
 hip:HazardType rdf:type owl:Class ;
-               rdfs:subClassOf skos:Collection ;
                rdfs:label "Hazard Type" .
 
 
@@ -3806,7 +3825,8 @@ hip:MH0060 rdf:type owl:Class ;
 
 
 ###  https://undrr-hip.org/MetadataElement
-hip:MetadataElement rdf:type owl:Class .
+hip:MetadataElement rdf:type owl:Class ;
+                    rdfs:label "Metadata Element" .
 
 
 ###  https://undrr-hip.org/Organization
@@ -3932,7 +3952,6 @@ hip:ScientificDescription rdf:type owl:Class ;
 
 ###  https://undrr-hip.org/SpecificHazard
 hip:SpecificHazard rdf:type owl:Class ;
-                   rdfs:subClassOf skos:Collection ;
                    rdfs:label "Specific Hazard" .
 
 
@@ -5133,9 +5152,19 @@ hip:CH0007 rdf:type owl:NamedIndividual ,
                     hip:CH0007 .
 
 
+###  https://undrr-hip.org/CH0009
+hip:CH0009 rdf:type owl:NamedIndividual ,
+                    hip:CH0009 .
+
+
 ###  https://undrr-hip.org/CH0010
 hip:CH0010 rdf:type owl:NamedIndividual ,
                     hip:CH0010 .
+
+
+###  https://undrr-hip.org/CH0011
+hip:CH0011 rdf:type owl:NamedIndividual ,
+                    hip:CH0011 .
 
 
 ###  https://undrr-hip.org/CH0013
@@ -5209,6 +5238,11 @@ hip:CH0025 rdf:type owl:NamedIndividual ,
                     hip:CH0025 .
 
 
+###  https://undrr-hip.org/CHO012
+hip:CHO012 rdf:type owl:NamedIndividual ,
+                    hip:CHO012 .
+
+
 ###  https://undrr-hip.org/EN0001
 hip:EN0001 rdf:type owl:NamedIndividual ,
                     hip:EN0001 .
@@ -5239,6 +5273,11 @@ hip:EN0005 rdf:type owl:NamedIndividual ,
 ###  https://undrr-hip.org/EN0006
 hip:EN0006 rdf:type owl:NamedIndividual ,
                     hip:EN0006 .
+
+
+###  https://undrr-hip.org/EN0007
+hip:EN0007 rdf:type owl:NamedIndividual ,
+                    hip:EN0007 .
 
 
 ###  https://undrr-hip.org/EN0008
@@ -6731,6 +6770,63 @@ hip:definition.CH0003 rdf:type owl:NamedIndividual ,
                       skos:definition "Arsenic is a toxic heavy metal widely distributed throughout the Earth’s crust, generally as arsenic sulphide or as metal arsenates and arsenides. Human exposure to arsenic compounds represents a major public health concern as it has been associated with a range of acute and long-term adverse health effects and diseases" .
 
 
+###  https://undrr-hip.org/definition.CH0005
+hip:definition.CH0005 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.who ;
+                      skos:definition "Lead is a naturally occurring highly toxic heavy metal. Its widespread use has caused extensive environmental contamination and health problems in many parts of the world. It is a cumulative toxicant that affects multiple body systems, including the neurological, haematological, gastrointestinal, cardiovascular and renal systems. Children are particularly vulnerable to the neurotoxic effects of lead, and even relatively low levels of exposure can cause serious and, in some cases, irreversible neurological damage (WHO, 2010)." .
+
+
+###  https://undrr-hip.org/definition.CH0006
+hip:definition.CH0006 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ,
+                                           hip:organization.who ;
+                      skos:definition "Mercury is a naturally occurring element that is found in air, water and soil. Exposure to mercury – even small amounts – may cause serious health problems and is a threat to the development of the foetus in utero and for children early in life (WHO, 2017)." .
+
+
+###  https://undrr-hip.org/definition.CH0007
+hip:definition.CH0007 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ,
+                                           hip:organization.who ;
+                      skos:definition "A contaminant in food and feed is defined as any substance not intentionally added to food or feed for food-producing animals, which is present in such food or feed as a result of the production (including operations carried out in crop husbandry, animal husbandry and veterinary medicine), manufacture, processing, preparation, treatment, packing, packaging, transport or storage, or as a result of environmental contamination. Note: The term includes toxins, such as moulds, but does not include insect fragments, rodent hairs and other extraneous matter (FAO and WHO, 2019)." .
+
+
+###  https://undrr-hip.org/definition.CH0008
+hip:definition.CH0008 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ,
+                                           hip:organization.who ;
+                      terms:references "https://www.unep.org/explore-topics/chemicals-waste/what-we-do/emerging-issues/highly-hazardous-pesticides-hhps" ;
+                      skos:definition """Pesticide means any substance, or mixture of substances of chemical or biological ingredients intended for repelling, destroying or controlling any pest, or regulating plant growth. Pesticides are inherently toxic, and among them, a small number of Highly Hazardous Pesticides, cause disproportionate harm to the environment and human health. The Food and Agriculture Organization (FAO) and the World Health Organization (WHO) Guidelines on Highly Hazardous pesticides (UNEP, 2021) adopted the following definition:
+
+“Highly Hazardous Pesticides means pesticides that are acknowledged to present particularly high levels of acute or chronic hazards to health or environment according to internationally accepted classification systems such as WHO or Global Harmonized System (GHS) or their listing in relevant binding international agreements or conventions. In addition, pesticides that appear to cause severe or irreversible harm to health or the environment under conditions of use in a country may be considered to be and treated as highly hazardous.”""" .
+
+
+###  https://undrr-hip.org/definition.CH0009
+hip:definition.CH0009 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ,
+                                           hip:organization.who ;
+                      skos:definition "Pesticide residue means any specified substance in food, agricultural commodities, or animal feed resulting from the use of a pesticide. The term includes any derivatives of a pesticide, such as conversion products, metabolites, reaction products, and impurities considered to be of toxicological significance (FAO and WHO, no date, 2019)." .
+
+
+###  https://undrr-hip.org/definition.CH0010
+hip:definition.CH0010 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      skos:definition "Hazardous pesticide contamination in soils often results from improper storage of (obsolete) agrochemicals, as a result of which pesticides are spilled in the surroundings of the storage site, where they seep into the soil or are dispersed by wind. In some cases, pesticide spillage has been ongoing for many years. Such spillage may cause serious soil or groundwater contamination. In addition, highly toxic and persistent compounds have been used in agriculture for decades to control pests and diseases, which are proven to cause harm to non-target species. Although international agreements are put in place to regulate the production and use of those highly toxic and persistent compounds they will still remain in soils for several more decades. Moreover, in some countries, the international agreements are not yet being implemented or fully implemented, and therefore toxic pesticides are still being used. When soil and groundwater are contaminated, crops, livestock and drinking water may become affected and, when they are consumed by people, health risks may occur (FAO, 2000)." .
+
+
+###  https://undrr-hip.org/definition.CH0011
+hip:definition.CH0011 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.cdc ;
+                      terms:references "https://www.cdc.gov/nceh/tracking/topics/PesticideExposure.htm" ;
+                      skos:definition "Insecticides are chemicals used to control insects by killing them (CDC, 2019)." .
+
+
 ###  https://undrr-hip.org/definition.CH0013
 hip:definition.CH0013 rdf:type owl:NamedIndividual ,
                                hip:Definition ;
@@ -6738,10 +6834,28 @@ hip:definition.CH0013 rdf:type owl:NamedIndividual ,
                       skos:definition "Dioxins and dioxin-like substances, including polychlorinated biphenyls (PCBs), polychlorinated dibenzo-p-dioxins (PCDDs) and polychlorinated dibenzofurans (PCDFs) are persistent organic pollutants (POPs) and are unwanted by-products of combustion and various industrial processes, such as chlorine bleaching of paper pulp and smelting. They can travel long distances from the source of emission, and bioaccumulate in food chains These substances represent a major public health concern. They have been associated with a range of acute and long-term adverse health effects and diseases" .
 
 
+###  https://undrr-hip.org/definition.CH0014
+hip:definition.CH0014 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Microplastics are small plastic pieces less than five millimetres in length which can be harmful to the environment especially marine life. They originate from a variety of sources, including larger plastic debris that degrades into progressively smaller pieces (adapted from UNEP, 2016 and NOAA, no date)." .
+
+
+###  https://undrr-hip.org/definition.CH0015
+hip:definition.CH0015 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Phosphine (PH₃) is a colourless, flammable, and explosive gas at room temperature. The major uses of phosphine are as a rodenticide and fumigant for agricultural products and in the manufacture of semiconductors for the electronics industry. Exposure to low doses causes non-specific symptoms, such as nausea, vomiting, stomach pain, diarrhoea, thirst, muscle pain, difficulty breathing and fluid in the lungs. Exposure to higher doses may cause more severe effects, even death (adapted from PHE, 2017 and CDC, 2019)." .
+
+
 ###  https://undrr-hip.org/definition.CH0016
 hip:definition.CH0016 rdf:type owl:NamedIndividual ,
                                hip:Definition ;
                       skos:definition "Chlorine is a reactive pale green gas with many uses including disinfection of water that is approximately three times heavier than air and has a characteristic odour similar to bleach. Most significant exposures to chlorine result from loss of containment of chlorine during storage and transport. Human exposure can result in symptoms ranging from mild irritation to rapid death related to pulmonary oedema. It is considered a significant public health hazard" .
+
+
+###  https://undrr-hip.org/definition.CH0017
+hip:definition.CH0017 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Oil pollution includes the accidental or deliberate, operational spills of oil from ships, especially tankers, offshore platforms and pipelines (Global Marine Oil Pollution Information Gateway, no date)." .
 
 
 ###  https://undrr-hip.org/definition.CH0018
@@ -6777,6 +6891,51 @@ hip:definition.CH0021 rdf:type owl:NamedIndividual ,
                       skos:definition "Aflatoxins are mycotoxins – toxic compounds that are naturally produced by certain types of mould (fungi). Aflatoxins are among the most poisonous mycotoxins and are produced by certain moulds (Aspergillus flavus and A. parasiticus) that grow in soil, decaying vegetation, hay, and grains. Aflatoxins pose a serious health risk to humans and livestock" .
 
 
+###  https://undrr-hip.org/definition.CH0022
+hip:definition.CH0022 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.who ;
+                      skos:definition "Fluoride is a naturally occurring mineral to which the public are often exposed via drinking-water. Depending on dose intake fluoride may have both beneficial effects (reducing the incidence of dental caries) or negative effects (causing tooth enamel and skeletal fluorosis following prolonged high exposure) (adapted from NCBI, 2020 and WHO, no date)." .
+
+
+###  https://undrr-hip.org/definition.CH0023
+hip:definition.CH0023 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.who ;
+                      skos:definition "Methanol is a colourless fairly volatile liquid with a faintly sweet pungent odour similar to ethyl alcohol. Outbreaks of methanol poisoning arise from the consumption of adulterated counterfeit or informally produced spirit drinks (adapted from NCBI, 2020 and WHO, 2014)." .
+
+
+###  https://undrr-hip.org/definition.CH0024
+hip:definition.CH0024 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.who ;
+                      skos:definition "Substandard and falsified medical products are defined as those that may cause harm to patients and fail to treat the diseases for which they were intended (WHO, 2018)." .
+
+
+###  https://undrr-hip.org/definition.CH0025
+hip:definition.CH0025 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ,
+                                           hip:organization.who ;
+                      skos:definition "Marine toxins (biotoxins) are naturally occurring chemicals, mostly caused by certain types of toxic algae, but also by bacteria. These toxins can accumulate in fish and shellfish and present a human health hazard (WHO, no date). When people consume such contaminated aquatic products, depending on the toxins, they can evoke a variety of gastrointestinal and neurological illnesses (paralytic shellfish poisoning, amnesic shellfish poisoning, diarrhoeic shellfish poisoning, neurotoxic shellfish poisoning, azaspiracid shellfish poisoning and ciguatera poisoning)." .
+
+
+###  https://undrr-hip.org/definition.CHO012
+hip:definition.CHO012 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ,
+                                           hip:organization.who ;
+                      terms:references "https://ephtracking.cdc.gov/showpesticideFungicides" ;
+                      skos:definition "Fungicides are chemicals that kill or slow the growth of fungi and their spores. They can be used on plants or other surfaces where mould or mildew grow (CDC, 2019)." .
+
+
+###  https://undrr-hip.org/definition.EN0001
+hip:definition.EN0001 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.who ;
+                      skos:definition "Household air pollution is one of the leading causes of disease and premature death and is associated with inefficient cooking practices using polluting stoves paired with solid fuels and kerosene (WHO, 2018)." .
+
+
 ###  https://undrr-hip.org/definition.EN0002
 hip:definition.EN0002 rdf:type owl:NamedIndividual ,
                                hip:Definition ;
@@ -6794,6 +6953,40 @@ hip:definition.EN0003 rdf:type owl:NamedIndividual ,
                       skos:definition "Ambient (outdoor) air pollution is a leading environmental risk factor affecting urban and rural populations around the world, resulting in an estimated 4.2 million premature deaths in 2016" .
 
 
+###  https://undrr-hip.org/definition.EN0004
+hip:definition.EN0004 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      skos:definition """Land degradation means reduction or loss, in arid, semi-arid and dry subhumid areas, of the biological or economic productivity and complexity of rainfed cropland, irrigated cropland or range, pasture, forest and woodlands resulting from land uses or from a process or combination of processes, including processes arising from human activities and habitation patterns such as: soil erosion caused by wind and/or water; deterioration of the physical, chemical and biological or economic properties of soil; and long-term loss of natural vegetation (UNCCD, 1993).
+
+Alternative Definition: Land degradation is the reduction in the capability of the land to produce benefits from a particular land use under a specified form of land management (FAO, 1999).
+
+Alternative Definition: Land degradation is a negative trend in land condition, caused by direct or indirect human-induced processes including anthropogenic climate change, expressed as long-term reduction or loss of at least one of the following: biological productivity, ecological integrity or value to humans. [Note: This definition applies to forest and non-forest land. Changes in land condition resulting solely from natural processes (such as volcanic eruptions) are not considered to be land degradation. Reduction of biological productivity or ecological integrity or value to humans can constitute degradation, but any one of these changes need not necessarily be considered degradation.] (Olsson et al., 2019).""" .
+
+
+###  https://undrr-hip.org/definition.EN0005
+hip:definition.EN0005 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      terms:references "https://www.fao.org/soils-portal/about/all-definitions/en" ;
+                      skos:definition "Soil degradation is defined as a change in soil health status resulting in a diminished capacity of the ecosystem to provide goods and services for its beneficiaries (FAO, 2020)." .
+
+
+###  https://undrr-hip.org/definition.EN0006
+hip:definition.EN0006 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Nonpoint sources of pollution refer to pollution sources that are diffused and without a single point of origin or not introduced into a receiving freshwater or maritime environment from a specific outlet. The pollutants are generally carried off the land by storm-water run-off. The commonly used categories for nonpoint sources are agriculture, forestry, urban areas, mining, construction, dams and channels, land disposal and saltwater intrusion (UN data, no date)." .
+
+
+###  https://undrr-hip.org/definition.EN0007
+hip:definition.EN0007 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      skos:definition """Saline soils are those which have an electrical conductivity of the saturation soil extract of more than 4 dS/m at 25°C (Richards, 1954). This value is generally used worldwide although the terminology committee of the Soil Science Society of America has lowered the boundary between saline and non-saline soils to 2 dS/m in the saturation extract (FAO, 1988).
+
+Note: dS/m = decisiemens per metre this is equivalent to the measurement of electrical conductivity of the salinity which can also be described as millimho per centimetre, hence 1 dS/m = 1 mmho/cm. Once the dS/m is known this can be converted to either mg/L or parts per million (ppm) (University of California, 2020).""" .
+
+
 ###  https://undrr-hip.org/definition.EN0008
 hip:definition.EN0008 rdf:type owl:NamedIndividual ,
                                hip:Definition ;
@@ -6808,11 +7001,50 @@ hip:definition.EN0009 rdf:type owl:NamedIndividual ,
                       skos:definition "Deforestation is the conversion of forest to other land use independently of whether human-induced or not" .
 
 
+###  https://undrr-hip.org/definition.EN0010
+hip:definition.EN0010 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Forest declines and diebacks are episodic events characterised by premature, progressive loss of tree and stand vigour and health over a given period without obvious evidence of a single clearly identifiable causal factor such as physical disturbance or attack by primary disease or insect (Ciesla and Donaubauer, 1994)." .
+
+
+###  https://undrr-hip.org/definition.EN0011
+hip:definition.EN0011 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      skos:definition "Forest disturbance is the damage caused by any factor (biotic or abiotic) that adversely affects the vigour and productivity of the forest and which is not a direct result of human activities. It includes disturbance by insect pests, diseases, severe weather events and fires (FAO, 2018, 2020)." .
+
+
+###  https://undrr-hip.org/definition.EN0012
+hip:definition.EN0012 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      skos:definition "Forest invasive species are any species that are non-native to a particular forest ecosystem and whose introduction and spread causes, or are likely to cause, socio-cultural, economic or environmental harm or harm to human health (adapted from FAO, 2015)." .
+
+
+###  https://undrr-hip.org/definition.EN0013
+hip:definition.EN0013 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      hip:definitionSource hip:organization.fao ;
+                      skos:definition "Wildfires are any unplanned or uncontrolled fire affecting natural, cultural, industrial and residential landscapes (adapted from FAO, 2010)." .
+
+
 ###  https://undrr-hip.org/definition.EN0014
 hip:definition.EN0014 rdf:type owl:NamedIndividual ,
                                hip:Definition ;
                       hip:definitionSource hip:organization.unccd ;
                       skos:definition "Desertification refers to land degradation in arid, semi-arid and dry subhumid areas resulting from various factors, including climatic variations and human activities" .
+
+
+###  https://undrr-hip.org/definition.EN0015
+hip:definition.EN0015 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Mangroves and the destruction of mangrove habitat is caused by both human and natural causes. Human activities in the form of farming, aquaculture, urban development and natural stressors such as erosion and extreme weather have driven mangrove habitat loss. The hazard of loss of mangroves and their ecosystem services has devastating socioeconomic and environmental consequences for coastal communities, especially in those areas with low mangrove diversity and low mangrove area (adapted from Ellison et al., 1996; Polidoro et al., 2010; and Goldberg, 2020)." .
+
+
+###  https://undrr-hip.org/definition.EN0016
+hip:definition.EN0016 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Wetland loss/degradation is a negative trend in wetland condition, caused by physical or direct/indirect human-induced processes expressed as long-term reduction or loss of at least one of the following: biological productivity, ecological role or value to humans (Craig et al., 1979; Olsson et al., 2019). Where wetlands are defined as areas of marsh, fen, peatland or water, whether natural or artificial, permanent or temporary, with water that is static or flowing, fresh, brackish or salt, including areas of marine water the depth of which at low tide does not exceed six metres (Ramsar Convention 1971: Article 1.1). Wetlands may incorporate riparian and coastal zones adjacent to the wetlands, and islands or bodies of marine water deeper than six metres at low tide lying within the wetlands (Ramsar Convention 1971: Article 2.1)." .
 
 
 ###  https://undrr-hip.org/definition.EN0017
@@ -6828,11 +7060,41 @@ hip:definition.EN0018 rdf:type owl:NamedIndividual ,
                       skos:definition "Compressible soils include both compressive and collapsible soils. Compressive soils are soils that are prone to volumetric change when subject to mechanical loading (USDA, 1990:30). Collapsible soils are metastable in that they are prone to volumetric change (collapse) on wetting and loading" .
 
 
+###  https://undrr-hip.org/definition.EN0019
+hip:definition.EN0019 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Soil erosion is defined as the accelerated removal of topsoil from the land surface through water, wind and tillage (FAO, 2020)." .
+
+
 ###  https://undrr-hip.org/definition.EN0020
 hip:definition.EN0020 rdf:type owl:NamedIndividual ,
                                hip:Definition ;
                       hip:definitionSource hip:organization.bgs ;
                       hip:synonym "Coastal erosion is the physical reduction of land mass at the coast that results from the interfacing of marine, fluvial and landsliding (driven by the interactions between groundwater and the soil or rock) processes with the coast" .
+
+
+###  https://undrr-hip.org/definition.EN0021
+hip:definition.EN0021 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Permafrost is defined as the ground that remains frozen under 0°C for a minimum of two consecutive years. Permafrost loss, also known as permafrost thaw is the progressive loss of ground ice in permafrost, usually due to input of heat. Thaw can occur over decades to centuries over the entire depth of permafrost ground, with impacts occurring while thaw progresses. During thaw, temperature fluctuations are subdued because energy is transferred by phase change between ice and water. After the transition from permafrost to non-permafrost, ground can be described as thawed (IPCC, 2019)." .
+
+
+###  https://undrr-hip.org/definition.EN0022
+hip:definition.EN0022 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Sand mining (extraction) is defined as the removal of primary (virgin) natural sand and sand resources (mineral sands and aggregates) from the natural environment (terrestrial, riverine, coastal, or marine) for extracting valuable minerals, metals, crushed stone, sand and gravel for subsequent processing (UNEP, 2019)." .
+
+
+###  https://undrr-hip.org/definition.EN0023
+hip:definition.EN0023 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Sea-level change (sea-level rise / sea-level fall) is a change to the height of sea level, both globally and locally (relative sea-level change) at seasonal, annual, or longer time scales due to: a change in ocean volume as a result of a change in the mass of water in the ocean (e.g., due to melt of glaciers and ice sheets); to changes in ocean volume as a result of changes in ocean water density (e.g., expansion under warmer conditions), and to changes in the shape of the ocean basins and changes in the Earth’s gravitational and rotational fields, and local subsidence or uplift of the land (IPCC, 2019)." .
+
+
+###  https://undrr-hip.org/definition.EN0024
+hip:definition.EN0024 rdf:type owl:NamedIndividual ,
+                               hip:Definition ;
+                      skos:definition "Eutrophication is the overabundance of nutrients in a body of water that results in harmful algal blooms, fish kills, and in some cases ecosystem collapse. It is a process driven by enrichment of water by nutrients, particularly compounds of nitrogen and/or phosphorus, leading to increased growth, primary production and biomass of algae; changes in the balance of nutrients causing changes to the balance of organisms; and water quality degradation (NOAA, 2007; UNEP, 2015)." .
 
 
 ###  https://undrr-hip.org/definition.ET0001
@@ -7661,7 +7923,13 @@ hip:definition.TL0048 rdf:type owl:NamedIndividual ,
 ###  https://undrr-hip.org/organization.bgs
 hip:organization.bgs rdf:type owl:NamedIndividual ,
                               hip:Organization ;
+                     hip:definitionSource hip:organization.fao ;
                      rdfs:label "British Geological Survey" .
+
+
+###  https://undrr-hip.org/organization.cdc
+hip:organization.cdc rdf:type owl:NamedIndividual ,
+                              hip:Organization .
 
 
 ###  https://undrr-hip.org/organization.fao
@@ -7801,8 +8069,8 @@ hip:BI0001 hip:synonym "HABs" ;
            hip:identifier "BI0001" .
 
 
-hip:BI0002 hip:identifier "BI0002" ;
-           rdfs:label "Insect Pest Infestations" ;
+hip:BI0002 rdfs:label "Insect Pest Infestations" ;
+           hip:identifier "BI0002" ;
            hip:synonym "Outbreak" ,
                        "Invasion Swarm Plague" .
 
@@ -7933,10 +8201,10 @@ hip:BI0029 rdfs:label "Prion Diseases" ;
 
 
 hip:BI0030 hip:identifier "BI0030" ;
-           hip:synonym "Hepatitis B related cirrhosis and hepatocellular carcinoma" ,
-                       "Chronic hepatitis B" ;
-           rdfs:label "Hepatitis B (Human)" ;
-           hip:synonym "Acute hepatitis B" .
+           hip:synonym "Chronic hepatitis B" ,
+                       "Hepatitis B related cirrhosis and hepatocellular carcinoma" ,
+                       "Acute hepatitis B" ;
+           rdfs:label "Hepatitis B (Human)" .
 
 
 hip:BI0031 hip:synonym "Acute hepatitis C" ,
@@ -7961,8 +8229,8 @@ hip:BI0034 hip:identifier "BI0034" ;
            rdfs:label "Cholera (Human)" .
 
 
-hip:BI0035 hip:identifier "BI0035" ;
-           hip:synonym "Crypto" ;
+hip:BI0035 hip:synonym "Crypto" ;
+           hip:identifier "BI0035" ;
            rdfs:label "Cryptosporidium" .
 
 
@@ -8010,8 +8278,8 @@ hip:BI0044 rdfs:label "Seasonal Influenza" ;
 
 
 hip:BI0045 hip:synonym "Taeniasis" ;
-           hip:identifier "BI0045" ;
-           rdfs:label "Cysticercosis" .
+           rdfs:label "Cysticercosis" ;
+           hip:identifier "BI0045" .
 
 
 hip:BI0046 rdfs:label "Leptospirosis (Human)" ;
@@ -8127,8 +8395,8 @@ hip:BI0071 skos:definition "Vector-borne diseases are diseases transmitted by a 
            rdfs:label "Vector-borne diseases (VBD) (Animals)" .
 
 
-hip:BI0072 hip:synonym "Undulant fever" ,
-                       "Malta fever" ,
+hip:BI0072 hip:synonym "Malta fever" ,
+                       "Undulant fever" ,
                        "Contagious abortion" ,
                        "Mediterranean fever" ;
            hip:identifier "BI0072" ;
@@ -8146,8 +8414,8 @@ hip:BI0074 hip:identifier "BI0074" ;
                        "Perineumonía contagiosa bovina" .
 
 
-hip:BI0075 hip:identifier "BI0075" ;
-           hip:synonym "Pleuroneumonía contagiosa caprina" ;
+hip:BI0075 hip:synonym "Pleuroneumonía contagiosa caprina" ;
+           hip:identifier "BI0075" ;
            rdfs:label "Contagious Caprine Pleuropneumonia (CCPP) (Animal)" ;
            hip:synonym "Pleuropneumonie Contagieuse Caprine" .
 
@@ -8199,9 +8467,9 @@ hip:BI00869 rdfs:comment "Trypanosomiasis, human African (sleeping sickness) is 
             rdfs:label "Trypanosomiasis (Human)" .
 
 
-hip:BI0087 hip:synonym "Photorhabdus insect-related (Pir)" ,
-                       "Hepatopancreas (HP)" ,
-                       "Early mortality syndrome (EMS)" ;
+hip:BI0087 hip:synonym "Early mortality syndrome (EMS)" ,
+                       "Photorhabdus insect-related (Pir)" ,
+                       "Hepatopancreas (HP)" ;
            rdfs:label "Shrimp disease (bacterial) - Acute Hepatic pancreatic necrosis" ;
            hip:identifier "BI0087" .
 
@@ -8229,34 +8497,46 @@ hip:CH0004 skos:definition "Cadmium is a toxic heavy metal which is widely distr
            skos:definition "Pesticide residue means any specified substance in food, agricultural commodities, or animal feed resulting from the use of a pesticide. The term includes any derivatives of a pesticide, such as conversion products, metabolites, reaction products, and impurities considered to be of toxicological significance (FAO and WHO, no date, 2019)." .
 
 
-hip:CH0005 skos:definition "Fungicides are chemicals that kill or slow the growth of fungi and their spores. They can be used on plants or other surfaces where mould or mildew grow (CDC, 2019)." ;
-           rdfs:label "Lead" ,
-                      "Fungicides" ;
-           skos:definition "Lead is a naturally occurring highly toxic heavy metal. Its widespread use has caused extensive environmental contamination and health problems in many parts of the world. It is a cumulative toxicant that affects multiple body systems, including the neurological, haematological, gastrointestinal, cardiovascular and renal systems. Children are particularly vulnerable to the neurotoxic effects of lead, and even relatively low levels of exposure can cause serious and, in some cases, irreversible neurological damage (WHO, 2010)." .
+hip:CH0005 hip:identifier "CH0005" ;
+           rdfs:label "Lead" .
 
 
-hip:CH0006 rdfs:label "Mercury" ;
-           skos:definition "Mercury is a naturally occurring element that is found in air, water and soil. Exposure to mercury – even small amounts – may cause serious health problems and is a threat to the development of the foetus in utero and for children early in life (WHO, 2017)." .
+hip:CH0006 hip:identifier "CH0006" ;
+           rdfs:label "Mercury" ;
+           hip:synonym "Quicksilver" .
 
 
 hip:CH0007 rdfs:label "Levels of Contaminants in Food and Feed" ;
-           skos:definition "A contaminant in food and feed is defined as any substance not intentionally added to food or feed for food-producing animals, which is present in such food or feed as a result of the production (including operations carried out in crop husbandry, animal husbandry and veterinary medicine), manufacture, processing, preparation, treatment, packing, packaging, transport or storage, or as a result of environmental contamination. Note: The term includes toxins, such as moulds, but does not include insect fragments, rodent hairs and other extraneous matter (FAO and WHO, 2019)." .
+           hip:identifier "CH0007" .
+
+
+hip:CH0009 hip:identifier "CH0009" ;
+           rdfs:label "Residue of Pesticides" .
 
 
 hip:CH0010 rdfs:label "Hazardous Pesticide Contamination in Soils" ;
-           skos:definition """Hazardous pesticide contamination in soils often results from improperstorage of (obsolete) agrochemicals, as a result of which pesticides are spilled in the surroundings of the storage site, where they seep into the soil or are dispersed by wind. In some cases, pesticide spillage has been ongoing for many years. Such spillage may cause serious soil or groundwater contamination. In addition, highly toxic and persistent compounds have been used in agriculture for decades to control pests and diseases, which are proven to cause harm to non-target species.
-Although international agreements are put in place to regulate the production and use of those highly toxic and persistent compounds they will still remain in soils for several more decades. Moreover, in some countries, the international agreements are not yet being implemented or fully implemented, and therefore toxic pesticides are still being used. When soil and groundwater are contaminated, crops, livestock and drinking water may become affected and, when they are consumed by people, health risks may occur (FAO, 2000).""" .
+           hip:identifier "CH0010" .
+
+
+hip:CH0011 rdfs:label "Insecticides" ;
+           hip:identifier "CH0011" .
 
 
 hip:CH0013 hip:identifier "CH0013" ;
            rdfs:label "Dioxins and Dioxin-like Substances" .
 
 
-hip:CH0014 skos:definition "Microplastics are small plastic pieces less than five millimetres in length which can be harmful to the environment especially marine life. They originate from a variety of sources, including larger plastic debris that degrades into progressively smaller pieces (adapted from UNEP, 2016 and NOAA, no date)." ;
-           rdfs:label "Microplastics" .
+hip:CH0014 hip:identifier "CH0014" ;
+           rdfs:label "Microplastics" ;
+           hip:synonym "Nanoparticles Marine debris" .
 
 
-hip:CH0015 skos:definition "Phosphine (PH₃) is a colourless, flammable, and explosive gas at room temperature. The major uses of phosphine are as a rodenticide and fumigant for agricultural products and in the manufacture of semiconductors for the electronics industry. Exposure to low doses causes non-specific symptoms, such as nausea, vomiting, stomach pain, diarrhoea, thirst, muscle pain, difficulty breathing and fluid in the lungs. Exposure to higher doses may cause more severe effects, even death (adapted from PHE, 2017 and CDC, 2019)." ;
+hip:CH0015 hip:synonym "Phosphorus hydride" ,
+                       "Phosphoretted hydrogen" ,
+                       "Phosphane" ;
+           hip:identifier "CH0015" ;
+           hip:synonym "Hydrogen phosphide" ,
+                       "Phosphorus trihydride" ;
            rdfs:label "Phosphine" .
 
 
@@ -8264,7 +8544,8 @@ hip:CH0016 hip:identifier "CH0016" ;
            rdfs:label "Chlorine" .
 
 
-hip:CH0017 skos:definition "Oil pollution includes the accidental or deliberate, operational spills of oil from ships, especially tankers, offshore platforms and pipelines (Global Marine Oil Pollution Information Gateway, no date)." ;
+hip:CH0017 hip:identifier "CH0017" ;
+           hip:synonym "Oil spill" ;
            rdfs:label "Oil Pollution" .
 
 
@@ -8284,23 +8565,29 @@ hip:CH0021 rdfs:label "Aflatoxins" ;
            hip:identifier "CH0021" .
 
 
-hip:CH0022 rdfs:label "Fluoride - Excess or inadequate intake" .
+hip:CH0022 hip:identifier "CH0022" ;
+           rdfs:label "Fluoride - Excess or inadequate intake" .
 
 
 hip:CH0023 rdfs:label "Methanol" ;
-           skos:definition "Methanol is a colourless fairly volatile liquid with a faintly sweet pungent odour similar to ethyl alcohol. Outbreaks of methanol poisoning arise from the consumption of adulterated counterfeit or informally produced spirit drinks (adapted from NCBI, 2020 and WHO, 2014)." .
+           hip:identifier "CH0023" .
 
 
-hip:CH0024 rdfs:label "Substandard and Falsified Medical Products" ;
-           skos:definition "Substandard and falsified medical products are defined as those that may cause harm to patients and fail to treat the diseases for which they were intended (WHO, 2018)." .
+hip:CH0024 hip:identifier "CH0024" ;
+           rdfs:label "Substandard and Falsified Medical Products" ;
+           hip:synonym "Counterfeit medicines" .
 
 
 hip:CH0025 rdfs:label "Marine Toxins" ;
-           skos:definition "Marine toxins (biotoxins) are naturally occurring chemicals, mostly caused by certain types of toxic algae, but also by bacteria. These toxins can accumulate in fish and shellfish and present a human health hazard (WHO, no date). When people consume such contaminated aquatic products, depending on the toxins, they can evoke a variety of gastrointestinal and neurological illnesses (paralytic shellfish poisoning, amnesic shellfish poisoning, diarrhoeic shellfish poisoning, neurotoxic shellfish poisoning, azaspiracid shellfish poisoning and ciguatera poisoning)." .
+           hip:identifier "CH0025" .
+
+
+hip:CHO012 hip:identifier "CHO012" ;
+           rdfs:label "Fungicides" .
 
 
 hip:EN0001 rdfs:label "Household Air Pollution" ;
-           skos:definition "Household air pollution is one of the leading causes of disease and premature death and is associated with inefficient cooking practices using polluting stoves paired with solid fuels and kerosene (WHO, 2018)." .
+           hip:identifier "EN0001" .
 
 
 hip:EN0002 hip:synonym "Fugitive emissions" ;
@@ -8316,18 +8603,20 @@ hip:EN0003 hip:synonym "Smog" ;
                        "Ambient air pollution" .
 
 
-hip:EN0004 rdfs:label "Land Degradation" ;
-           skos:definition """Land degradation means reduction or loss, in arid, semi-arid and dry subhumid areas, of the biological or economic productivity and complexity of rainfed cropland, irrigated cropland or range, pasture, forest and woodlands resulting from land uses or from a process or combination of processes, including processes arising from human activities and habitation patterns such as: soil erosion caused by wind and/or water; deterioration of the physical, chemical and biological or economic properties of soil; and long-term loss of natural vegetation (UNCCD, 1993).
-Alternative Definition: Land degradation is the reduction in the capability of the land to produce benefits from a particular land use under a specified form of land management (FAO, 1999).
-Alternative Definition: Land degradation is a negative trend in land condition, caused by direct or indirect human-induced processes including anthropogenic climate change, expressed as long-term reduction or loss of at least one of the following: biological productivity, ecological integrity or value to humans. [Note: This definition applies to forest and non-forest land. Changes in land condition resulting solely from natural processes (such as volcanic eruptions) are not considered to be land degradation. Reduction of biological productivity or ecological integrity or value to humans can constitute degradation, but any one of these changes need not necessarily be considered degradation.] (Olsson et al., 2019).""" .
+hip:EN0004 hip:identifier "EN0004" ;
+           rdfs:label "Land Degradation" .
 
 
-hip:EN0005 rdfs:label "Soil Degradation" ;
-           skos:definition "Soil degradation is defined as a change in soil health status resulting in a diminished capacity of the ecosystem to provide goods and services for its beneficiaries (FAO, 2020)." .
+hip:EN0005 hip:identifier "EN0005" ;
+           rdfs:label "Soil Degradation" .
 
 
-hip:EN0006 rdfs:label "Runoff / Nonpoint Source Pollution" ;
-           skos:definition "Nonpoint sources of pollution refer to pollution sources that are diffused and without a single point of origin or not introduced into a receiving freshwater or maritime environment from a specific outlet. The pollutants are generally carried off the land by storm-water run-off. The commonly used categories for nonpoint sources are agriculture, forestry, urban areas, mining, construction, dams and channels, land disposal and saltwater intrusion (UN data, no date)." .
+hip:EN0006 hip:identifier "EN0006" ;
+           rdfs:label "Runoff / Nonpoint Source Pollution" .
+
+
+hip:EN0007 hip:identifier "EN0007" ;
+           rdfs:label "Salinity" .
 
 
 hip:EN0008 hip:identifier "EN0008" ;
@@ -8338,17 +8627,33 @@ hip:EN0009 hip:identifier "EN0009" ;
            rdfs:label "Deforestation" .
 
 
-hip:EN0010 rdfs:label "Forest Declines and Diebacks" .
+hip:EN0010 rdfs:label "Forest Declines and Diebacks" ;
+           hip:identifier "EN0010" ;
+           hip:synonym "Walsterben and Waldschaden" ,
+                       "Canopy level dieback" ,
+                       "Stand level dieback" .
 
 
-hip:EN0011 rdfs:label "Forest Disturbances" .
+hip:EN0011 hip:identifier "EN0011" ;
+           rdfs:label "Forest Disturbances" .
 
 
-hip:EN0012 rdfs:label "Forest Invasive Species" .
+hip:EN0012 hip:identifier "EN0012" ;
+           rdfs:label "Forest Invasive Species" ;
+           hip:synonym "Forest pests" .
 
 
-hip:EN0013 rdfs:label "Wildfires" ;
-           skos:definition "Wildfires are any unplanned or uncontrolled fire affecting natural, cultural, industrial and residential landscapes (adapted from FAO, 2010)." .
+hip:EN0013 hip:synonym "Grass fire" ;
+           rdfs:label "Wildfires" ;
+           hip:synonym "Wildland fire" ,
+                       "Peat fire" ,
+                       "Bushfire" ;
+           hip:identifier "EN0013" ;
+           hip:synonym "Vegetation fire" ,
+                       "Forest fire" ,
+                       "Scrub fire" ,
+                       "Brush fire" ,
+                       "Landscape fire" .
 
 
 hip:EN0014 skos:definition "Desertification refers to land degradation in arid, semi-arid and dry subhumid areas resulting from various factors, including climatic variations and human activities" ;
@@ -8356,11 +8661,13 @@ hip:EN0014 skos:definition "Desertification refers to land degradation in arid, 
            hip:identifier "EN0014" .
 
 
-hip:EN0015 rdfs:label "Loss of Mangroves" ;
-           skos:definition "Mangroves and the destruction of mangrove habitat is caused by both human and natural causes. Human activities in the form of farming, aquaculture, urban development and natural stressors such as erosion and extreme weather have driven mangrove habitat loss. The hazard of loss of mangroves and their ecosystem services has devastating socioeconomic and environmental consequences for coastal communities, especially in those areas with low mangrove diversity and low mangrove area (adapted from Ellison et al., 1996; Polidoro et al., 2010; and Goldberg, 2020)." .
+hip:EN0015 hip:synonym "Mangrove deforestation" ;
+           rdfs:label "Loss of Mangroves" ;
+           hip:identifier "EN0015" ;
+           hip:synonym "Mangrove loss" .
 
 
-hip:EN0016 skos:definition "Wetland loss/degradation is a negative trend in wetland condition, caused by physical or direct/indirect human-induced processes expressed as long-term reduction or loss of at least one of the following: biological productivity, ecological role or value to humans (Craig et al., 1979; Olsson et al., 2019). Where wetlands are defined as areas of marsh, fen, peatland or water, whether natural or artificial, permanent or temporary, with water that is static or flowing, fresh, brackish or salt, including areas of marine water the depth of which at low tide does not exceed six metres (Ramsar Convention 1971: Article 1.1). Wetlands may incorporate riparian and coastal zones adjacent to the wetlands, and islands or bodies of marine water deeper than six metres at low tide lying within the wetlands (Ramsar Convention 1971: Article 2.1)." ;
+hip:EN0016 hip:identifier "EN0016" ;
            rdfs:label "Wetland Loss/Degradation" .
 
 
@@ -8378,7 +8685,7 @@ hip:EN0018 rdfs:label "Compressive Soils" ;
                        "Settlement" .
 
 
-hip:EN0019 skos:definition "Soil erosion is defined as the accelerated removal of topsoil from the land surface through water, wind and tillage (FAO, 2020)." ;
+hip:EN0019 hip:identifier "EN0019" ;
            rdfs:label "Soil Erosion" .
 
 
@@ -8389,16 +8696,18 @@ hip:EN0020 rdfs:label "Coastal Erosion and Shoreline Change" ;
                        "Coastal morphology" .
 
 
-hip:EN0021 rdfs:label "Permafrost Loss" ;
-           skos:definition "Permafrost is defined as the ground that remains frozen under 0°C for a minimum of two consecutive years. Permafrost loss, also known as permafrost thaw is the progressive loss of ground ice in permafrost, usually due to input of heat. Thaw can occur over decades to centuries over the entire depth of permafrost ground, with impacts occurring while thaw progresses. During thaw, temperature fluctuations are subdued because energy is transferred by phase change between ice and water. After the transition from permafrost to non-permafrost, ground can be described as thawed (IPCC, 2019)." .
+hip:EN0021 hip:synonym "Permafrost degradation" ,
+                       "Permafrost thaw" ;
+           rdfs:label "Permafrost Loss" ;
+           hip:identifier "EN0021" .
 
 
-hip:EN0022 skos:definition "Sand mining (extraction) is defined as the removal of primary (virgin) natural sand and sand resources (mineral sands and aggregates) from the natural environment (terrestrial, riverine, coastal, or marine) for extracting valuable minerals, metals, crushed stone, sand and gravel for subsequent processing (UNEP, 2019)." ;
+hip:EN0022 hip:identifier "EN0022" ;
            rdfs:label "Sand Mining" .
 
 
-hip:EN0023 skos:definition "Sea-level change (sea-level rise / sea-level fall) is a change to the height of sea level, both globally and locally (relative sea-level change) at seasonal, annual, or longer time scales due to: a change in ocean volume as a result of a change in the mass of water in the ocean (e.g., due to melt of glaciers and ice sheets); to changes in ocean volume as a result of changes in ocean water density (e.g., expansion under warmer conditions), and to changes in the shape of the ocean basins and changes in the Earth’s gravitational and rotational fields, and local subsidence or uplift of the land (IPCC, 2019)." ;
-           rdfs:label "Sea Level Rise" .
+hip:EN0023 rdfs:label "Sea Level Rise" ;
+           hip:identifier "EN0023" .
 
 
 hip:EN0024 rdfs:label "Eutrophication" .
@@ -8423,10 +8732,10 @@ hip:ET0001 hip:synonym "Superbolides" ,
 
 hip:ET0002 hip:synonym "Electromagnetic pulse (natural)" ;
            rdfs:label "Geomagnetic Storm (including energetic particles related to space weather, and solar flare radio blackout" ;
-           hip:synonym "Space weather" ,
-                       "Solar storm" ,
-                       "Magnetic storm" ;
-           hip:identifier "ET0002" .
+           hip:synonym "Solar storm" ,
+                       "Space weather" ;
+           hip:identifier "ET0002" ;
+           hip:synonym "Magnetic storm" .
 
 
 hip:ET0003 rdfs:label "UV Radiation" ;
@@ -8437,8 +8746,8 @@ hip:ET0004 rdfs:label "Meteorite Impact" ;
            hip:identifier "ET0004" .
 
 
-hip:ET0005 hip:identifier "ET0005" ;
-           rdfs:label "Ionospheric Storms" .
+hip:ET0005 rdfs:label "Ionospheric Storms" ;
+           hip:identifier "ET0005" .
 
 
 hip:ET0006 rdfs:label "Radio Blackout" ;
@@ -8464,10 +8773,10 @@ hip:GH0001 rdfs:label "Earthquake" ;
            hip:synonym "Earth tremor" .
 
 
-hip:GH0002 hip:synonym "Ground vibration" ,
-                       "Ground motion" ;
+hip:GH0002 hip:synonym "Ground vibration" ;
            rdfs:label "Ground Shaking (Earthquake)" ;
-           hip:synonym "Seismicity" ,
+           hip:synonym "Ground motion" ,
+                       "Seismicity" ,
                        "Vibration" ,
                        "Local ground response" ,
                        "Shaking intensity" .
@@ -8476,8 +8785,8 @@ hip:GH0002 hip:synonym "Ground vibration" ,
 hip:GH0003 rdfs:label "Liquefaction (Earthquake Trigger)" .
 
 
-hip:GH0004 hip:synonym "Fault offset" ,
-                       "Fault scarp" ,
+hip:GH0004 hip:synonym "Fault scarp" ,
+                       "Fault offset" ,
                        "Coseismic subsidence" ,
                        "Ground deformation" ;
            rdfs:label "Earthquake Surface Rupture, Fissures, and Tectonic Uplift/Subsidence" ;
@@ -8494,15 +8803,15 @@ hip:GH0006 rdfs:label "Tsunami (Earthquake Trigger)" .
 
 hip:GH0007 hip:synonym "Slip" ;
            rdfs:label "Landslide or Debris Flow (Earthquake Trigger)" ;
-           hip:synonym "Mass Movement" ,
-                       "Mass wasting" .
+           hip:synonym "Mass wasting" ,
+                       "Mass Movement" .
 
 
 hip:GH0008 hip:synonym "Radon" ,
                        "Soil gases" ,
                        "Landfill gas" ,
-                       "Volcanic gases" ,
-                       "Magmatic gases" ;
+                       "Magmatic gases" ,
+                       "Volcanic gases" ;
            rdfs:label "Ground Gases (Seismogenic)" ;
            hip:synonym "Gas-contaminated land" .
 
@@ -8521,14 +8830,14 @@ hip:GH0010 hip:synonym "Pyroclast" ,
 
 
 hip:GH0011 hip:synonym "Projectiles" ;
-           rdfs:label "Ballistics (Volcanic)" ;
-           hip:identifier "GH0011" .
+           hip:identifier "GH0011" ;
+           rdfs:label "Ballistics (Volcanic)" .
 
 
 hip:GH0012 hip:synonym "Ash flow" ;
            rdfs:label "Pyroclastic Density Current" ;
-           hip:synonym "Nuée ardente" ,
-                       "Hot avalanche" ,
+           hip:synonym "Hot avalanche" ,
+                       "Nuée ardente" ,
                        "Pyroclastic flow" .
 
 
@@ -8538,8 +8847,8 @@ hip:GH0013 hip:identifier "GH0013" ;
                        "Volcanic mudflow" .
 
 
-hip:GH0014 hip:synonym "Mass movement" ,
-                       "Mass wasting" ;
+hip:GH0014 hip:synonym "Mass wasting" ,
+                       "Mass movement" ;
            rdfs:label "Landslide (Volcanic Trigger)" ;
            hip:synonym "Slip" .
 
@@ -8580,12 +8889,12 @@ hip:GH0020 rdfs:label "Subsidence and Uplift, Including Shoreline Change (Magmat
 
 hip:GH0021 hip:synonym "Seismicity" ,
                        "Vibration" ,
-                       "Ground motion" ,
-                       "Peak ground acceleration (PGA)" ,
                        "Earth tremor" ,
-                       "Ground vibration" ;
+                       "Ground motion" ,
+                       "Peak ground acceleration (PGA)" ;
            rdfs:label "Ground Shaking (induced earthquake, reservoir fill, dams, cavity collapse, underground explosion, impact, hydrocarbon fields, shale exploration, etc.)" ;
-           hip:synonym "Shaking intensity" ,
+           hip:synonym "Ground vibration" ,
+                       "Shaking intensity" ,
                        "Local ground response" .
 
 
@@ -8619,16 +8928,16 @@ hip:GH0025 rdfs:label "Shrink-Swell Subsidence" ;
 hip:GH0026 hip:synonym "Swallet" ,
                        "Sink-hole" ,
                        "Sink" ,
-                       "Doline cenote" ,
-                       "Swallow" ;
+                       "Swallow" ,
+                       "Doline cenote" ;
            rdfs:label "Sinkhole" .
 
 
 hip:GH0027 hip:synonym "Volcanic gases" ,
                        "Magmatic gases" ,
-                       "Landfill gas" ,
-                       "Gas-contaminated land" ;
-           rdfs:label "Ground Gases (CH4, Rn, etc.)" .
+                       "Landfill gas" ;
+           rdfs:label "Ground Gases (CH4, Rn, etc.)" ;
+           hip:synonym "Gas-contaminated land" .
 
 
 hip:GH0028 hip:synonym "Stream bank disintegration" ,
@@ -8646,15 +8955,15 @@ hip:GH0030 hip:synonym "Groundwater recharge" ;
 
 hip:GH0031 hip:synonym "Slump" ;
            rdfs:label "Submarine Landslide" ;
-           hip:synonym "Mass movement" ,
-                       "Turbidity current" ,
+           hip:synonym "Turbidity current" ,
+                       "Mass movement" ,
                        "Mudflow" ,
                        "Liquefaction flow" ,
                        "Debris flow" .
 
 
-hip:GH0032 hip:synonym "Block fall" ,
-                       "Boulder fall" ;
+hip:GH0032 hip:synonym "Boulder fall" ,
+                       "Block fall" ;
            rdfs:label "Rockfall" ;
            hip:synonym "Rock fall" ,
                        "Rock free fall" .
@@ -8673,8 +8982,8 @@ hip:GH0035 rdfs:label "Tsunami (Submarine Landslide Trigger)" ;
            terms:references "https://unesdoc.unesco.org/ark:/48223/pf0000188226?posInSet=1&queryId=aeb846ae-edfb-4d66-a03a-385a5d5897f0" .
 
 
-hip:GHC041 skos:definition "A submarine landslide is a downslope movement of sediment or rock under the effect of gravity, which occurs when the stresses acting downslope exceed the available strength of the sediment on the slope (Lee et al., 2007)." ;
-           rdfs:label "Submarine Landslide" .
+hip:GHC041 rdfs:label "Submarine Landslide" ;
+           skos:definition "A submarine landslide is a downslope movement of sediment or rock under the effect of gravity, which occurs when the stresses acting downslope exceed the available strength of the sediment on the slope (Lee et al., 2007)." .
 
 
 hip:GHC042 rdfs:label "Rockfall" ;
@@ -8765,9 +9074,9 @@ hip:MH0011 rdfs:label "Snowmelt Flood" ;
                        "Melt-induced flooding" .
 
 
-hip:MH0012 rdfs:label "Surface Water Flooding" ;
-           hip:synonym "Surface detention" ,
-                       "Surface retention" ,
+hip:MH0012 hip:synonym "Surface detention" ;
+           rdfs:label "Surface Water Flooding" ;
+           hip:synonym "Surface retention" ,
                        "Depression storage" ;
            hip:identifier "MH0012" .
 
@@ -8777,9 +9086,9 @@ hip:MH0013 rdfs:label "Glacial Lake Outburst Flood" ;
            hip:identifier "MH0013" .
 
 
-hip:MH0014 hip:synonym "Soot" ;
+hip:MH0014 hip:synonym "Soot" ,
+                       "Brown clouds" ;
            rdfs:label "Black Carbon (Brown Clouds)" ;
-           hip:synonym "Brown clouds" ;
            hip:identifier "MH0014" .
 
 
@@ -8825,9 +9134,9 @@ hip:MH0023 hip:synonym "Saltwater intrusion" ;
 
 
 hip:MH0024 hip:identifier "MH0024" ;
+           hip:synonym "Ice floes" ;
            rdfs:label "Sea Ice (Ice Bergs)" ;
-           hip:synonym "Ice floes" ,
-                       "Pack ice" .
+           hip:synonym "Pack ice" .
 
 
 hip:MH0025 hip:identifier "MH0025" ;
@@ -8902,9 +9211,9 @@ hip:MH0040 rdfs:label "Cold Wave" ;
            hip:identifier "MH0040" .
 
 
-hip:MH0041 rdfs:label "Dzud" ;
-           hip:synonym "Cold surge" ,
-                       "Winter storm" ,
+hip:MH0041 hip:synonym "Cold surge" ;
+           rdfs:label "Dzud" ;
+           hip:synonym "Winter storm" ,
                        "Blizzard" ;
            hip:identifier "MH0041" .
 
@@ -8950,10 +9259,10 @@ hip:MH0050 hip:identifier "MH0050" ;
 
 
 hip:MH0051 hip:synonym "Land slide" ,
-                       "Hyperconcentrated flow" ,
-                       "Debris flow" ;
+                       "Hyperconcentrated flow" ;
            rdfs:label "Mud Flow" ;
-           hip:identifier "MH0051" .
+           hip:identifier "MH0051" ;
+           hip:synonym "Debris flow" .
 
 
 hip:MH0052 hip:identifier "MH0052" ;
@@ -8981,8 +9290,8 @@ hip:MH0056 hip:identifier "MH0056" ;
 
 hip:MH0057 rdfs:label "Tropical Cyclone" ;
            hip:identifier "MH0057" ;
-           hip:synonym "Cyclone" ,
-                       "Severe tropical cyclone" ,
+           hip:synonym "Severe tropical cyclone" ,
+                       "Cyclone" ,
                        "Hurricane" ,
                        "Typhoon" .
 
@@ -9016,8 +9325,8 @@ hip:SO0002 skos:definition "Non-international armed conflict is defined as protr
 hip:SO0003 hip:synonym "Violent disorder" ;
            rdfs:label "Civil Unrest" ;
            hip:identifier "SO0003" ;
-           hip:synonym "Civil disobedience" ,
-                       "Civil disturbance" ,
+           hip:synonym "Civil disturbance" ,
+                       "Civil disobedience" ,
                        "Social unrest" ,
                        "Civil disorder" .
 
@@ -9136,15 +9445,15 @@ hip:TL0020 hip:synonym "Intellectual data breach" ,
 
 hip:TL0021 hip:synonym "Security threats" ;
            hip:identifier "TL0021" ;
-           rdfs:label "Data Security-Related Hazards" ;
-           hip:synonym "Security incidents" .
+           hip:synonym "Security incidents" ;
+           rdfs:label "Data Security-Related Hazards" .
 
 
 hip:TL0022 hip:identifier "TL0022" ;
            rdfs:label "Disrupt" ;
            hip:synonym "Network security" ,
-                       "Disruption tolerance" ,
-                       "Internet resilience" .
+                       "Internet resilience" ,
+                       "Disruption tolerance" .
 
 
 hip:TL0023 skos:definition "A cyber outage is the unavailability of a service or resource (ITU, 1996)." ;
@@ -9165,8 +9474,8 @@ The IoT is a relatively new technology that is a hazard if a data security or br
            rdfs:label "Internet of Things (IOT)-Related Hazards" .
 
 
-hip:TL0026 hip:synonym "Cyber harassment" ,
-                       "Harassment online" ;
+hip:TL0026 hip:synonym "Harassment online" ,
+                       "Cyber harassment" ;
            rdfs:label "Cyberbullying" ;
            hip:synonym "Online harassment" ;
            hip:identifier "TL0026" ;
@@ -9198,8 +9507,8 @@ hip:TL0032 rdfs:label "Industrial Fire" ;
            skos:definition "Fire related technological incidents can be defined as accidental or intentional events that result in the actual or potential exposure of responders and/or members of the public to a chemical hazard (adapted from WHO, no date)" .
 
 
-hip:TL0033 skos:definition "Mining hazards can be defined as having major environmental impacts including the production of waste, release of toxic and hazardous waste, air pollution and emissions, water pollution and depletion, and the loss of productive land and ecosystems (adapted from UNDP and UN Environment, 2018)." ;
-           rdfs:label "Mining Hazards" .
+hip:TL0033 rdfs:label "Mining Hazards" ;
+           skos:definition "Mining hazards can be defined as having major environmental impacts including the production of waste, release of toxic and hazardous waste, air pollution and emissions, water pollution and depletion, and the loss of productive land and ecosystems (adapted from UNDP and UN Environment, 2018)." .
 
 
 hip:TL0034 skos:definition """Oil and gas extraction, and associated servicing activities involve many types of equipment and materials. Identifying and controlling hazards is critical to preventing injuries and deaths (US Department of Labor, no date).
@@ -9248,8 +9557,8 @@ hip:TL0044 skos:definition "Tailings are a common by-product of the mineral reco
            rdfs:label "Tailings" .
 
 
-hip:TL0045 rdfs:label "Waste Treatment Lagoons" ;
-           skos:definition "Waste [treatment] lagoons can be defined as impoundments made by excavation or earth fill for biological treatment of animal and other agricultural waste (Spellman and Bieber, 2012)." .
+hip:TL0045 skos:definition "Waste [treatment] lagoons can be defined as impoundments made by excavation or earth fill for biological treatment of animal and other agricultural waste (Spellman and Bieber, 2012)." ;
+           rdfs:label "Waste Treatment Lagoons" .
 
 
 hip:TL0046 hip:synonym "Drainage floods" ;
